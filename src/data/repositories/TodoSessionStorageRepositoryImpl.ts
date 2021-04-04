@@ -25,7 +25,7 @@ export class TodoSessionStorageRepositoryImpl implements TodoRepository {
     deleteTodo(data: Todo): Todo[] {
         const parseIntData = parseInt(data.todoUID.toString())
         const indextoDelete = parsedJsonString.findIndex((data: Todo) => data.todoUID === parseIntData)
-        parsedJsonString.splice(indextoDelete, 1)
+        parsedJsonString.splice(indextoDelete)
         sessionStorage.setItem(todoListSessionStorageName, JSON.stringify(parsedJsonString))
         return parsedJsonString.map((todo: TodoDTO) => new Todo(todo.todoUID, todo.todo, todo.todoIsComplete))
     }

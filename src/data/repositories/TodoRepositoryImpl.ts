@@ -26,7 +26,7 @@ export class TodoRepositoryImpl implements TodoRepository {
 
     deleteTodo(data: Todo): Todo[] {
         const indextoDelete = jsontodoList.findIndex((todoUIDData) => todoUIDData.todoUID === data.todoUID)
-        jsontodoList.splice(indextoDelete, 1)
+        jsontodoList.splice(indextoDelete)
         return jsontodoList.map((todo: TodoDTO) => new Todo(todo.todoUID, todo.todo, todo.todoIsComplete))
     }
 
