@@ -47,7 +47,7 @@ export const completeTodo = (todo: any) => {
     return async function (dispatch: any) {
         const todoRepo = new TodoSessionStorageRepositoryImpl()
         const todoService = new TodoServiceImpl(todoRepo)
-        const todos = await todoService.CompleteTodo(todo)
+        const todos = await todoService.UpdateTodo(todo)
         dispatch({ type: LIST_LOAD_SUCCESS, payload: todos })
     }
 }
