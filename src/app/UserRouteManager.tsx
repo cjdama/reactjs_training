@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom"
+import { Redirect, BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import UserList from "./pages/user/UserList"
 
 const UserRouteManager = () => {

@@ -14,6 +14,7 @@ const ItemList = ({ items }: ItemProps) => {
     return (
         <div>
             <button onClick={handleClick}>Refresh</button>
+
             <ul>
                 {items.map((item: Item) => (
                     <li key={item.id}>{item.name}</li>

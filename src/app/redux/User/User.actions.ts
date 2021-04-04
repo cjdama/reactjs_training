@@ -8,7 +8,7 @@ export const refreshList = async (dispatch: any) => {
     try {
         const userRepo = new UserRepositoryImpl()
         const userService = new UserServiceImpl(userRepo)
-        const users = await userService.GetItems()
+        const users = await userService.GetUsers()
         dispatch({ type: LIST_LOAD_SUCCESS, payload: users })
     } catch (error) {
         dispatch({ type: LIST_LOAD_FAILURE, error })

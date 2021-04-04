@@ -1,5 +1,5 @@
 import { User } from "../entities/Users"
 
 export interface UserRepository {
-    GetItems(): Promise<User[]>
+    GetUsers(): Promise<User[]>
 }

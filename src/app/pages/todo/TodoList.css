@@ -1,0 +1,131 @@
+.todoSubmitContainer button{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: larger;
+    background: #7c22f1;
+    cursor: pointer;
+    outline:none;
+}
+
+.todoHeader h1{
+    text-align: center;
+}
+
+.todoListWrapper{
+    background: rgb(255, 255, 255);
+    max-width: 400px;
+    width: 100%;
+    margin: 120px auto;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+
+.todoheader header{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.todoInputContainer input:focus{
+    border-color: #38373a;
+}
+
+.todoInputContainer input{
+    width: 94%;
+    height: 100%;
+    outline: none;
+    margin-top: 20px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: 25px;
+    padding-left: 15px;
+    transition: all 0.3s ease;
+}
+
+.todoListWrapper .footer{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todoListContainer table, th, td, tbody, thead{
+    font-size: large;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    padding: 3px;
+}
+
+.todoListContainer tbody{
+    display:block;
+    overflow:auto;
+    height:300px;
+    width:100%;
+}
+
+.todoListContainer tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.delete{
+    height: 30px;
+    width: 50px;
+    padding:  1.5px;
+    cursor: pointer;
+    background: #da2727;
+    color:rgb(255, 255, 255);
+    border: none;
+    outline: none;
+}
+
+.update{
+    margin-bottom: 10px;
+    height: 30px;
+    width: 50px;
+    padding:  1.5px;
+    cursor: pointer;
+    background: #0bacac;
+    color:rgb(255, 255, 255);
+    border: none;
+    outline: none;
+}
+
+.editTodo{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.saveUpdateTodo{
+    margin-left: 20px;
+    margin-right: 10px;
+    height: 30px;
+    width: 50px;
+    padding:  1.5px;
+    cursor: pointer;
+    background: #0bacac;
+    color:rgb(255, 255, 255);
+    border: none;
+    outline: none;
+}
+
+.cancelUpdateTodo{
+    height: 30px;
+    width: 50px;
+    padding:  1.5px;
+    cursor: pointer;
+    background: #ac0b0b;
+    color:rgb(255, 255, 255);
+    border: none;
+    outline: none;
+}

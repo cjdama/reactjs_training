@@ -2,7 +2,7 @@ import { User } from "../entities/Users"
 import { UserRepository } from "../repositories/UsersRepository"
 
 export interface UserService {
-    GetItems(): Promise<User[]>
+    GetUsers(): Promise<User[]>
 }
 
 export class UserServiceImpl implements UserService {
@@ -12,7 +12,7 @@ export class UserServiceImpl implements UserService {
         this.userRepo = ir
     }
 
-    async GetItems(): Promise<User[]> {
-        return this.userRepo.GetItems()
+    async GetUsers(): Promise<User[]> {
+        return this.userRepo.GetUsers()
     }
 }
