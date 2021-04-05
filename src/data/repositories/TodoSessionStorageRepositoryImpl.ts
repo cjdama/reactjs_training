@@ -37,7 +37,6 @@ export class TodoSessionStorageRepositoryImpl implements TodoRepository {
     }
 
     completeTodo(data: Todo): Todo[] {
-        const parseIntData = parseInt(data.todoUID.toString())
         const indextoUpdateTodoStatus = parsedJsonString.findIndex((data: Todo) => data.todoUID === data.todoUID)
         parsedJsonString[indextoUpdateTodoStatus].todoIsComplete = data.todoIsComplete
         sessionStorage.setItem(todoListSessionStorageName, JSON.stringify(parsedJsonString))

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { connect, useDispatch } from "react-redux"
 import { refreshList, createTodo, deleteTodo, updateTodo, completeTodo } from "../../redux/Todo/Todo.actions"
 import { TodoProps, Todo } from "../../redux/Todo/Todo.types"
+//import { format } from 'date-fns';
 import "./TodoList.css"
 
 interface RootState {
@@ -20,9 +21,7 @@ const TodoList = ({ todos }: TodoProps) => {
     }, [dispatch])
 
     const createNewTodo = () => {
-        const forUID = Date.now().toString()
         const todoDatas = {
-            todoUID: forUID,
             todo: fortodo,
             todoIsComplete: false,
         }

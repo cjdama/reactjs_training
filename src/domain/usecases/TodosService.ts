@@ -18,6 +18,16 @@ export class TodoServiceImpl implements TodoService {
 
     async createTodo(data: any) {
         const todoInput = data.todo.trim()
+        const today = new Date()
+        const end = new Date()
+        const DateforUID = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate()
+        console.log("Date Created-->>", DateforUID)
+        let dayCount = 0
+        while (end > today) {
+            dayCount++
+            today.setDate(today.getDate() + 1)
+        }
+        console.log("Number of Days -->>", dayCount)
         if (todoInput.length === 0) {
             throw alert("Invalid Input")
         } else {
