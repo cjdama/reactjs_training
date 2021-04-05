@@ -27,7 +27,7 @@ export class TodoServiceImpl implements TodoService {
             dayCount++
             today.setDate(today.getDate() + 1)
         }
-        console.log("Number of Days -->>", dayCount)
+        console.log("Number of Days-->>", dayCount)
         if (todoInput.length === 0) {
             throw alert("Invalid Input")
         } else {

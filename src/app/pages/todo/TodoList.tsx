@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react"
 import { connect, useDispatch } from "react-redux"
 import { refreshList, createTodo, deleteTodo, updateTodo, completeTodo } from "../../redux/Todo/Todo.actions"
 import { TodoProps, Todo } from "../../redux/Todo/Todo.types"
-//import { format } from 'date-fns';
 import "./TodoList.css"
 
 interface RootState {
@@ -105,7 +104,7 @@ const TodoList = ({ todos }: TodoProps) => {
                                                 onClick={() => {
                                                     const todoStatus = todo.todoIsComplete ? false : true
                                                     const todoDatas = {
-                                                        todoUID: todo.todoUID,
+                                                        todoUID: todo.todo,
                                                         todoIsComplete: todoStatus,
                                                     }
                                                     dispatch(completeTodo(todoDatas))
